@@ -1,0 +1,44 @@
+.note {
+  height: 300px;
+  background: #888789;
+  padding: 30px;
+
+  p {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .active {
+    position: absolute;
+    animation: effect 2s linear forwards;
+  }
+
+
+}
+
+
+.clicked {
+  background: #7e2626;
+}
+
+@keyframes effect {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+
+  99.99% {
+    top: -599px;
+    opacity: 1;
+  }
+
+  to {
+    top: -500px;
+    opacity: 0;
+    display: none;
+  }
+}
