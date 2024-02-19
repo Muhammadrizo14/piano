@@ -1,10 +1,7 @@
-import React from 'react';
 
 const Index = () => {
   return (
-    <div>
-      <p>asdf</p>
-    </div>
+    <div className='active noteeffect' />
   );
 };
 

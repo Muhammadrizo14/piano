@@ -1,16 +1,18 @@
 import './App.scss'
 import Note from "./Components/Note";
+import notes from './util/notes'
+
 
 function App() {
-
   return (
     <div className='pianoBoard'>
       <div className="notes">
-        <Note note='c' keyboardKey='a'/>
-        <Note note='d' keyboardKey='s'/>
+        {notes.map(note => (
+          <Note key={note.note} {...note} />
+        ))}
       </div>
     </div>
   )
 }
 
-export default App
+export default App;
