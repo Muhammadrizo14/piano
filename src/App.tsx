@@ -6,6 +6,8 @@ import notes from './util/notes'
 function App() {
   return (
     <div className='pianoBoard'>
+      <p className="createdby">created by <a href="https://t.me/ubuntuous">@ubuntuous</a></p>
+
       <div className="notes">
         {notes.map(note => (
           <Note key={note.note} {...note} />

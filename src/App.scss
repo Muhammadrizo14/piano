@@ -2,6 +2,7 @@
   position: relative;
   height: 100vh;
   width: 100%;
+
   .notes {
     display: flex;
     justify-content: center;
@@ -9,5 +10,16 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+  }
+
+  .createdby {
+    z-index: 1;
+    background-color: #50443D;
+    top: 0;
+    padding: 26px 0 24px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
   }
 }
