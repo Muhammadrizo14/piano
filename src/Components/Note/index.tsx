@@ -1,15 +1,16 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import './styles.scss'
-import { useRef } from 'react';
+import {useRef} from 'react';
 import NoteEffect from "./NoteEffect";
 import useSound from 'use-sound';
+
 interface IProps {
   note: string,
   keyboardKey: string,
   soundEffect: any
 }
 
-const Index = ({ keyboardKey, soundEffect }: IProps) => {
+const Index = ({keyboardKey, soundEffect}: IProps) => {
   const noteWrap = useRef<HTMLDivElement>(null);
   const [counter, setCounter] = useState(0)
   const [play] = useSound(soundEffect);
@@ -39,12 +40,13 @@ const Index = ({ keyboardKey, soundEffect }: IProps) => {
   }, []);
 
   return (
-    <div className='note' ref={noteWrap} onClick={play}>
-      {Array.from({ length: counter }, (_, i) => (
-        <NoteEffect key={i} />
+    <div className='note' ref={noteWrap} onClick={() => {
+      new Audio(soundEffect).play(),
+      setCounter(prev => prev + 1)
+    }}>
+      {Array.from({length: counter}, (_, i) => (
+        <NoteEffect key={i}/>
       ))}
-
-      {/*<NoteEffect/>*/}
       <p>{keyboardKey}</p>
     </div>
   );
