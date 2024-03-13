@@ -13,7 +13,6 @@ interface IProps {
 const Index = ({keyboardKey, soundEffect}: IProps) => {
   const noteWrap = useRef<HTMLDivElement>(null);
   const [counter, setCounter] = useState(0)
-  const [play] = useSound(soundEffect);
 
 
   const handleKeyPress = (key: any) => {
