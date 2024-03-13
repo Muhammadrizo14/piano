@@ -2,7 +2,6 @@ import {useEffect, useState} from 'react';
 import './styles.scss'
 import {useRef} from 'react';
 import NoteEffect from "./NoteEffect";
-import useSound from 'use-sound';
 
 interface IProps {
   note: string,
